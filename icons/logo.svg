@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon part -->
+  <g transform="translate(10, 10)">
+    <!-- Outer circle -->
+    <circle cx="20" cy="20" r="19" fill="url(#logoGradient)"/>
+    
+    <!-- Letter J -->
+    <path d="M 14 12 L 14 25 C 14 28 16 30 20 30 C 24 30 26 28 26 25 L 26 23.5" 
+          stroke="white" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+    
+    <!-- AI accent dot -->
+    <circle cx="26" cy="15" r="2" fill="white"/>
+  </g>
+  
+  <!-- Text "JARVIS" -->
+  <g transform="translate(60, 35)">
+    <text font-family="system-ui, -apple-system, sans-serif" 
+          font-size="28" 
+          font-weight="700" 
+          letter-spacing="1" 
+          fill="#1a202c">
+      <tspan x="0" y="0">JARVIS</tspan>
+    </text>
+  </g>
+</svg>
+

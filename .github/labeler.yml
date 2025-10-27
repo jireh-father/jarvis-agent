@@ -1,0 +1,31 @@
+# PR Labeler 설정 파일
+# 변경된 파일 패턴에 따라 자동으로 라벨을 추가합니다
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/*'
+    - any-glob-to-any-file: '*.md'
+
+tests:
+  - changed-files:
+    - any-glob-to-any-file: 'tests/**/*'
+
+frontend:
+  - changed-files:
+    - any-glob-to-any-file: 'templates/**/*'
+    - any-glob-to-any-file: 'static/**/*'
+
+backend:
+  - changed-files:
+    - any-glob-to-any-file: 'app/**/*.py'
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file: 'requirements.txt'
+    - any-glob-to-any-file: 'pyproject.toml'
+    - any-glob-to-any-file: 'setup.py'
+
+ci/cd:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**/*'
+

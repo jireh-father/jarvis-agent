@@ -1,0 +1,26 @@
+---
+description: Guidelines for managing issues including creation, comments, and closing
+---
+
+# Issue Management Rules
+
+## Issue Creation
+- Use clear, descriptive titles
+- Provide detailed description of the problem or feature
+- Add relevant labels (bug, enhancement, documentation, etc.)
+- Assign to appropriate team member if known
+- Include steps to reproduce for bugs
+
+## Issue Comments
+- Keep discussions focused and relevant
+- Provide updates on progress
+- Use @mentions to notify specific people
+- Include code snippets or screenshots when helpful
+- Be respectful and professional
+
+## Closing Issues
+- Verify the issue is fully resolved
+- Reference the closing PR using `Closes #issue-number`
+- Add a final comment summarizing the resolution
+- Ensure proper labels are applied
+- Only close when all acceptance criteria are met

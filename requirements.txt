@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+jinja2
+langchain-google-genai
+langgraph
+exa-py
+pytest
+pytest-asyncio
+httpx
+

@@ -1,0 +1,8 @@
+---
+description: Debugging and Troubleshooting Principles
+alwaysApply: false
+---
+# Debugging and Troubleshooting Principles
+1. Do not apply quick fixes or workaround exceptions only to the part where the bug occurs.  
+2. Identify and resolve the root cause of the problem.  
+3. Analyze the bug location, surrounding code, and call structure to trace the cause step by step.

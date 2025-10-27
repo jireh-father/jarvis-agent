@@ -1,0 +1,8 @@
+---
+description: python development principles
+alwaysApply: false
+---
+# Python Development Principles
+1. If `requirements.txt` does not exist, create one.  
+2. Refer to `requirements.txt` and only add packages when necessary.  
+3. Unless the user explicitly specifies a version, do not include version numbers — use the latest version by default.

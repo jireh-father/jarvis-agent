@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - AI 채팅 에이전트</title>
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="/icons/logo.svg" alt="JARVIS Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- 메인 채팅 컨테이너 -->
+    <main class="chat-container">
+        <!-- 메시지 영역 -->
+        <div id="messages" class="messages">
+            <!-- 환영 메시지 -->
+            <div class="message agent-message">
+                <div class="message-content">
+                    <div class="message-text">안녕하세요! 저는 JARVIS입니다. 무엇을 도와드릴까요?</div>
+                    <div class="message-label">JARVIS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 입력 영역 -->
+        <div class="input-area">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    class="message-input" 
+                    placeholder="메시지를 입력하세요..."
+                    autocomplete="off"
+                >
+                <button id="sendButton" class="send-button">전송</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

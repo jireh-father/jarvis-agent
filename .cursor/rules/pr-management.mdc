@@ -1,0 +1,26 @@
+---
+description: Guidelines for managing pull requests including creation, comments, and merging
+---
+
+# Pull Request Management Rules
+
+## PR Creation
+- Write clear, descriptive PR titles
+- Include a summary of changes in the PR description
+- Reference related issues using `#issue-number`
+- Ensure all tests pass before creating PR
+- Keep PRs focused on a single concern
+
+## PR Comments
+- Be constructive and respectful
+- Provide specific feedback with code suggestions
+- Use inline comments for code-specific feedback
+- Tag relevant reviewers with @mentions
+- Respond to all review comments
+
+## PR Merging
+- Require at least one approval before merging
+- Resolve all conversations before merging
+- Ensure CI/CD pipeline passes
+- Use squash merge for feature branches
+- Delete branch after successful merge

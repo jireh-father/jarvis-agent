@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <style>
+      .wire-text { font-family: system-ui, -apple-system, sans-serif; fill: #333; }
+      .wire-label { font-size: 12px; fill: #666; }
+      .wire-title { font-size: 16px; font-weight: 600; }
+      .wire-message { font-size: 14px; }
+      .wire-placeholder { font-size: 14px; fill: #999; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f5f5f5"/>
+
+  <!-- Browser Chrome -->
+  <rect x="100" y="50" width="1000" height="700" rx="8" fill="white" stroke="#ddd" stroke-width="2"/>
+  <rect x="100" y="50" width="1000" height="40" rx="8" fill="#e8e8e8"/>
+  <circle cx="120" cy="70" r="5" fill="#ff5f56"/>
+  <circle cx="140" cy="70" r="5" fill="#ffbd2e"/>
+  <circle cx="160" cy="70" r="5" fill="#27c93f"/>
+  <rect x="300" y="60" width="600" height="20" rx="10" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="320" y="75" class="wire-text wire-label">localhost:8000</text>
+
+  <!-- Header with Logo -->
+  <g transform="translate(100, 90)">
+    <rect width="1000" height="80" fill="white" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- Logo (scaled down from logo.svg) -->
+    <g transform="translate(30, 20) scale(0.8)">
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <g transform="translate(10, 10)">
+        <circle cx="20" cy="20" r="19" fill="url(#logoGradient)"/>
+        <path d="M 14 12 L 14 25 C 14 28 16 30 20 30 C 24 30 26 28 26 25 L 26 23.5" 
+              stroke="white" 
+              stroke-width="3" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              fill="none"/>
+        <circle cx="26" cy="15" r="2" fill="white"/>
+      </g>
+      <g transform="translate(60, 35)">
+        <text font-family="system-ui, -apple-system, sans-serif" 
+              font-size="28" 
+              font-weight="700" 
+              letter-spacing="1" 
+              fill="#1a202c">
+          <tspan x="0" y="0">JARVIS</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Chat Messages Area -->
+  <g transform="translate(100, 170)">
+    <rect width="1000" height="480" fill="#fafafa"/>
+    
+    <!-- Message 1 - User -->
+    <g transform="translate(100, 30)">
+      <rect x="0" y="0" width="600" height="80" rx="12" fill="#667eea"/>
+      <text x="20" y="30" class="wire-text wire-message" fill="white">오늘 서울 날씨 어때?</text>
+      <text x="560" y="65" class="wire-text wire-label" fill="rgba(255,255,255,0.7)">사용자</text>
+    </g>
+
+    <!-- Message 2 - Agent -->
+    <g transform="translate(300, 140)">
+      <rect x="0" y="0" width="600" height="100" rx="12" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+      <text x="20" y="30" class="wire-text wire-message">웹 검색 중...</text>
+      <text x="20" y="55" class="wire-text wire-message">오늘 서울은 맑고 기온은 15도입니다.</text>
+      <text x="20" y="80" class="wire-text wire-message">미세먼지는 보통 수준입니다.</text>
+      <text x="20" y="90" class="wire-text wire-label" fill="#667eea">JARVIS</text>
+    </g>
+
+    <!-- Message 3 - User -->
+    <g transform="translate(100, 270)">
+      <rect x="0" y="0" width="600" height="60" rx="12" fill="#667eea"/>
+      <text x="20" y="30" class="wire-text wire-message" fill="white">파이썬이 뭐야?</text>
+      <text x="560" y="45" class="wire-text wire-label" fill="rgba(255,255,255,0.7)">사용자</text>
+    </g>
+
+    <!-- Message 4 - Agent -->
+    <g transform="translate(300, 360)">
+      <rect x="0" y="0" width="600" height="80" rx="12" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+      <text x="20" y="30" class="wire-text wire-message">파이썬은 프로그래밍 언어입니다.</text>
+      <text x="20" y="55" class="wire-text wire-message">배우기 쉽고 다양한 분야에서 사용됩니다.</text>
+      <text x="20" y="70" class="wire-text wire-label" fill="#667eea">JARVIS</text>
+    </g>
+  </g>
+
+  <!-- Input Area -->
+  <g transform="translate(100, 650)">
+    <rect width="1000" height="100" fill="white" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- Input Box -->
+    <rect x="30" y="25" width="840" height="50" rx="25" fill="white" stroke="#ddd" stroke-width="2"/>
+    <text x="60" y="55" class="wire-text wire-placeholder">메시지를 입력하세요...</text>
+    
+    <!-- Send Button -->
+    <rect x="890" y="25" width="80" height="50" rx="25" fill="#667eea"/>
+    <text x="910" y="55" class="wire-text wire-message" fill="white" font-weight="600">전송</text>
+  </g>
+
+  <!-- Annotations -->
+  <text x="120" y="40" class="wire-text wire-label" fill="#999">UX Wireframe - Jarvis 채팅 Agent</text>
+</svg>
+

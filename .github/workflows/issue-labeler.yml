@@ -1,0 +1,90 @@
+name: Issue Labeler
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+      
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Auto label issues
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issue = context.payload.issue;
+          const title = issue.title.toLowerCase();
+          const body = (issue.body || '').toLowerCase();
+          const labels = [];
+          
+          // 타입 기반 라벨
+          if (title.includes('bug') || title.includes('버그') || body.includes('bug') || body.includes('버그')) {
+            labels.push('bug');
+          }
+          
+          if (title.includes('feature') || title.includes('기능') || body.includes('feature') || body.includes('기능')) {
+            labels.push('enhancement');
+          }
+          
+          if (title.includes('docs') || title.includes('문서') || body.includes('documentation')) {
+            labels.push('documentation');
+          }
+          
+          if (title.includes('question') || title.includes('질문') || title.includes('help')) {
+            labels.push('question');
+          }
+          
+          if (title.includes('test') || title.includes('테스트')) {
+            labels.push('tests');
+          }
+          
+          // 우선순위 기반 라벨
+          if (title.includes('urgent') || title.includes('긴급') || title.includes('critical')) {
+            labels.push('priority: high');
+          } else if (title.includes('low priority') || title.includes('낮은 우선순위')) {
+            labels.push('priority: low');
+          } else {
+            labels.push('priority: medium');
+          }
+          
+          // 영역 기반 라벨
+          if (body.includes('frontend') || body.includes('프론트엔드') || body.includes('ui')) {
+            labels.push('frontend');
+          }
+          
+          if (body.includes('backend') || body.includes('백엔드') || body.includes('api')) {
+            labels.push('backend');
+          }
+          
+          if (body.includes('database') || body.includes('데이터베이스') || body.includes('db')) {
+            labels.push('database');
+          }
+          
+          // 라벨이 하나도 없으면 기본 라벨 추가
+          if (labels.length === 0) {
+            labels.push('needs-triage');
+          }
+          
+          // 중복 제거
+          const uniqueLabels = [...new Set(labels)];
+          
+          // 라벨 추가
+          if (uniqueLabels.length > 0) {
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: uniqueLabels
+            });
+          }
+          
+          console.log(`Added labels: ${uniqueLabels.join(', ')}`);
+
