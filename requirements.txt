@@ -4,6 +4,7 @@ python-dotenv
 pydantic
 jinja2
 langchain-google-genai
+langchain-core
 langgraph
 exa-py
 pytest
